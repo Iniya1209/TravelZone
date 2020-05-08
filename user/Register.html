@@ -1,0 +1,288 @@
+<html>
+<head><title>Register-TravelZone</title>
+<script>
+function validation()
+{
+var a=document.f.n.value;
+var aa=document.f.ln.value;
+var b=document.f.mail.value;
+var c=document.f.pass.value;
+var d=document.f.cpass.value;
+var e=document.f.age.value;
+var h=document.f.mob.value;
+var i=document.f.ans.value;
+var atposition=b.indexOf("@");  
+var dotposition=b.lastIndexOf(".");  
+var g= /^[a-zA-Z]+$/;
+if(a==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(aa==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(b==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(c==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(d==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(e==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(h==""){
+alert("Please Enter all the fields")
+return false;
+}
+if(i==""){
+alert("Please Enter all the fields")
+return false;
+}
+
+if(c !=d) {
+alert("Confirm password")
+return false;
+}
+if(c.length<6){
+alert("Length of password must be atleast 6");
+return false;
+}
+if(isNaN(e)==true)
+{
+alert("Enter a valid age")
+return false;
+}
+if(h.length!=10 || isNaN(h)==true)
+{
+alert("Enter a valid Phone Number")
+return false;
+}  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address") 
+  return false; 
+}
+if(a.match(g) && aa.match(g)){
+    return true;
+}
+else{
+alert("Please enter a valid name")
+    return false;
+}
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+}
+input[type=text], select {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 24%;
+  background-color: #4BBBF3;
+  color:white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px outset;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+input[type=password], select {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ input[type="date"]{
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  .ul1 {
+  list-style-type: none;
+  margin: 0;
+  padding: 25px;
+  color:white;
+  overflow: hidden;
+  background-color: #4BBBF3;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #4BBBF3;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgba(0,0,0, 0.4);
+}
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("travel.jpg");
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  height: 318%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text1 {
+  background-color: rgb(0,0,0);
+  background-color:white;
+  color:#1D1C1C;
+  font-weight: bold;
+  border: 3px inset;
+  position: absolute;
+  top: 188%;
+  left: 50%;
+  height:2320px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+text-align: center;
+font-size:20px;
+font-family:Californian FB,garamond,serif;
+}
+</style>
+</head>
+<body>
+ <ul>
+  <li><a class="active" href="welcome.html">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li style="float:right"><a href="admin.html">Admin</a></li>
+</ul>
+
+<div class="bg-image"></div>
+<form name="f" method="post" onsubmit="return validation()" action="config.php">
+
+<div class="bg-text1">
+
+    <p style = "font-family:Californian FB,garamond,serif;font-size:55px;color:#4F4848 ">SIGNUP<br><img src="logo.jpg" height="100" width="120"></p><br>
+    <div class="ul1">
+    <ul>Details should be given pertaining to be any legal authorised ID</ul></div><br><br>
+  <h2>STEP 1: CREDENTIALS</h2>
+    First Name:*<input type="text" name="n" autocomplete="off"><br><br>
+    Last Name:*<input type="text" name="ln" autocomplete="off"><br><br>
+<br><br>
+<div class="ul1">
+<ul>The below given details are used for verification and authentication</ul></div><br><br>
+   E-mail:*<input type="text" name="mail"><br><br>
+    Password:*<input type="password" name="pass"><br><br>
+    Confirm password:*<input type="password" name="cpass"><br><br>
+<hr><br>
+    Gender:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="sex" value="Male"/><font size="4"> Male&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="sex" value="Female" />Female&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" name="sex" value="Others" />Others</font><br><br>
+<hr><br>
+Date of Birth:*
+<input type="date" name="dob" /><br><br>
+    Age:*<input type="text" name="age" autocomplete="off"><br><br>
+Mobile Number:*<input type="text" name="mob" autocomplete="off"><br><br>
+<hr><br>
+Security Question:*
+<select name="quest">
+  <option value="" disabled selected>Select your security question</option>
+  <option value="q1">What is your favourite book?</option>
+  <option value="q2">Which school did you study first?</option>
+  <option value="q3">What is the name of your pet?</option>
+  <option value="q4">Who is your ideal model?</option>
+</select><br><br>
+Security Answer:*
+<input type="text" name="ans" autocomplete="off"><br><br>
+
+<hr><br>
+<h2>STEP 2: PAYMENT</h2>
+Mode of payment:* <input type="radio" name="cr" value="credit"> CREDIT<input type="radio" name="de" value="debit"> DEBIT<br><br>
+Account No.:*<input type="text" name="acc" required autocomplete="off" required><br><br>
+CVV:*<input type="text" name="cvv"  autocomplete="off" required><br><br>
+Expiry Thru*&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" name="da" autocomplete="off" required><br><br>
+Min. Deposit:*<input type="text" name="bal" required autocomplete="off" required><br><br>
+<input type="checkbox" name="c" required/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<textarea rows="4" cols="50">
+By accepting the terms and condition of this agreement the following words shall have the following meanings:
+
+Ticket - means any ticket issued by TravelZone. It is an authorization to travel using our ticket booking facility for the specified journey over the network of Indian Railways. This means an E-ticket.
+
+PRS - Passenger Reservation System.
+
+Weekdays - All the days of the week other than Sunday.
+
+E-ticket - refers to a Railway reservation booked on this website, for the consummation of which the customer prints out an Electronic Reservation Slip which, along with the concerned authorized personal identification, constitutes the authority to travel, in lieu of the regular ticket on standard stationery.
+
+Tatkal Ticket - A ticket booked against Tatkal Quota against extra payment of premium charges as per extant Railway rules.
+
+Charting time - The time at which the charts for a particular train are prepared, for pasting on the coaches/exhibition boards before the departure of the train.
+
+ERS (Electronic Reservation Slip) - The printout in standard specified performa containing reservation particulars, and instructions for use which can be used by the Passenger along with the relevant authorized Identification, as travel authority for performing the journey. The user of ERS is governed by rules and instructions available on ERS itself.
+
+Virtual Reservation Message (VRM) - A screen-shot of e-ticket displayed through Laptops/Mobile Devices is referred as Virtual Reservation Message (VRM).
+
+Authorized ID-The Personal Photo Identification Card falling in any of these categories: 
+
+1. Passport.
+2. Voter photo identity card issued by Election Commission of India. 
+3. Driving Licence issued by RTO
+4. Pan Card issued by Income Tax Department.
+5. Photo Identity card having serial number issued by Central / State Government.
+6. Student Identity Card with photograph issued by recognized School/College for their students.
+7. Nationalized Bank Passbook with photographs. 
+8. Credit Cards issued by Banks with laminated photograph. 
+9. Printed Unique Identification card "Aadhaar" or downloaded Aadhaar (e-Aadhaar). 
+10. m-Aadhaar when shown through m-Aadhaar mobile app by the passenger on his/her mobile after entering the password is accepted as proof of identity for undertaking journey in any reserved class. 
+11. Photo identity cards having serial number issued by public sector Undertakings of State/Central Government, District Administrations, Municipal bodies and Panchayat Administrations. 
+12. Passenger showing the Aadhaar/Driving Licence from the “Issued Document” section by logging into his/her DigiLocker account considered as valid proof of identity. (Documents uploaded by the user i.e. the document in “Uploaded Document” section will not be considered as a valid proof of identity). 
+
+For Non-Indians, their Country's Passport will constitute sole authorized ID.
+</textarea><br><br>
+
+<input type="submit" value="COMPLETE YOUR REGISTRATION"><br><br>
+</div>
+</form>
+</body>
+</html>

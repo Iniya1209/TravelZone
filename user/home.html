@@ -1,0 +1,166 @@
+<html><head><title>TravelZone</title>
+<script>
+function validation(){
+var a=document.f.mail.value;
+var b=document.f.pass.value;
+if(a=="" || b=="")
+{
+alert("Please fill out all the elements")
+return false;
+}
+}
+</script>
+<style>
+body, html {
+  height: 100%;
+}
+input[type=text], select {
+  width: 260px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 120px;
+  background-color:#090665 ;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #736D6D;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=password], select {
+  width: 260px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3C1983;
+}
+
+li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: rgba(0,0,0, 0.4);
+}
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("train1.jpg");
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 123%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+font-family: Monotype corsiva;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 26%;
+left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+height: 235px;
+  padding: 0px;
+  text-align: center;
+}
+.bg-text1 {
+  background-color: rgb(0,0,0);
+  background-color: white;
+  color: white;
+  font-weight: bold;
+  border: 3px solid #736D6D;
+  position: absolute;
+  top:87%;
+  left: 83.5%;
+  height:560px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 28%;
+  padding: 0px;
+  text-align: center;
+}
+.bg-text2 {
+  color:#1D1C1C;
+  font-weight: bold;
+  position: absolute;
+  top:90%;
+  left: 26%;
+  height:560px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+  text-align: center;
+  font-size:20px;
+  font-family:Californian FB,garamond,serif;
+}
+
+</style></head>
+<body>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="Register.html">Register</a></li>
+  <li style="float:right"><a href="admin.html">Admin</a></li>
+</ul>
+
+<div class="bg-image"></div>
+<div class="bg-text">
+  <h4 style="font-size:65px">Travel-Zone<br>
+  <font size="3">Start your journey from the right place</font></h4>
+</div>
+<div class="bg-text2">
+<br><br>
+<h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHOW OUR SERVICE HELPS YOUR JOURNEY...</h3><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTravel-Zone allows you to book tickets for local city trains &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp in chennai, tracking central,harbor and western lines.Have a happy and a safe journey.
+</div>
+<form name="f" action="add.php" method="post">
+<div class="bg-text1">
+<p style = "font-family:Californian FB,garamond,serif;font-size:55px;color:#4F4848 ">BOOK<br>
+<font color="#4F4848" size="5">YOUR TICKET<br></font><img src="logo.jpg" height="100" width="120"></p>
+<input type="text" name="mail" placeholder="USERNAME" required><br><br>
+<input type="password" name="pass" placeholder="PASSWORD" required><br><br><br>
+<input type="submit" value="LOGIN" onclick="validation()" ></form>
+</div>
+</body>
+</html>

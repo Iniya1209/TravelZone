@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TravelZone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+.mySlides {display:none;}
+.bg-text {
+font-family: Arial, Helvetica, sans-serif;;
+  font-weight: bold;
+  text-align: left;
+  font-size:15px;
+}
+</style>
+</head>
+<body onload="startTime()">
+
+<nav class="navbar navbar-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">TravelZone</a>
+    </div>
+    <ul class="nav navbar-nav">
+      </li>
+      <li><a href="home.html">Home</a></li>
+      <li><div id="txt"></div></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="home.html"><span class="glyphicon glyphicon-log-in"></span> Admin</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="w3-content w3-section" style="max-width:1365px"  style="max-height: 100px">
+  <img class="mySlides" src="slide9.jpg" style="width:100%" style="height:100px">
+  <img class="mySlides" src="slide7.png" style="width:100%" style="height:100px">
+  <img class="mySlides" src="slide6.png" style="width:100%" style="height:100px">
+</div>
+<h1><center>ABOUT US</center></h1>
+<br><br><h6><div class="bg-text">
+  Ticket - means any ticket issued by TravelZone. It is an authorization to travel using our ticket booking facility for the specified journey over the network of Indian Railways. This means an E-ticket.<br>
+
+PRS - Passenger Reservation System.<br>
+
+Weekdays - All the days of the week other than Sunday.<br><br><br>
+
+E-ticket - refers to a Railway reservation booked on this website, for the consummation of which the customer prints out an Electronic Reservation Slip which, along with the concerned authorized personal identification, constitutes the authority to travel, in lieu of the regular ticket on standard stationery.<br>
+
+Tatkal Ticket - A ticket booked against Tatkal Quota against extra payment of premium charges as per extant Railway rules.<br>
+
+Charting time - The time at which the charts for a particular train are prepared, for pasting on the coaches/exhibition boards before the departure of the train.<br>
+
+ERS (Electronic Reservation Slip) - The printout in standard specified performa containing reservation particulars, and instructions for use which can be used by the Passenger along with the relevant authorized Identification, as travel authority for performing the journey. The user of ERS is governed by rules and instructions available on ERS itself.<br>
+
+Virtual Reservation Message (VRM) - A screen-shot of e-ticket displayed through Laptops/Mobile Devices is referred as Virtual Reservation Message (VRM).<br>
+
+Authorized ID-The Personal Photo Identification Card falling in any of these categories: <br>
+
+1. Passport.<br>
+2. Voter photo identity card issued by Election Commission of India. <br>
+3. Driving Licence issued by RTO<br>
+4. Pan Card issued by Income Tax Department.<br>
+5. Photo Identity card having serial number issued by Central / State Government.<br>
+6. Student Identity Card with photograph issued by recognized School/College for their students.<br>
+7. Nationalized Bank Passbook with photographs.<br> 
+8. Credit Cards issued by Banks with laminated photograph. <br>
+9. Printed Unique Identification card "Aadhaar" or downloaded Aadhaar (e-Aadhaar). <br>
+10. m-Aadhaar when shown through m-Aadhaar mobile app by the passenger on his/her mobile after entering the password is accepted as proof of identity for undertaking journey in any reserved class. <br>
+11. Photo identity cards having serial number issued by public sector Undertakings of State/Central Government, District Administrations, Municipal bodies and Panchayat Administrations. <br>
+12. Passenger showing the Aadhaar/Driving Licence from the “Issued Document” section by logging into his/her DigiLocker account considered as valid proof of identity. (Documents uploaded by the user i.e. the document in “Uploaded Document” section will not be considered as a valid proof of identity). <br><br>
+
+For Non-Indians, their Country's Passport will constitute sole authorized ID.
+</h6>
+<br><br>
+Contact our office for more details at,<br>
+Address: TravelZone Office,Anna Nagar-600040 <br><br>
+E-mail: kiniya669@gmail.com<br><br>
+Phone Number: 9443159121
+</div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); 
+}
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  var mo = today.getUTCMonth();
+  var d=today.getDate();
+  var yr=today.getFullYear();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+ "  "+"Date:" + d + "-" + mo + "-" + yr + " " +"  "+"Time:" + h + ":" + m + ":" + s + "  ";
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  
+  return i;
+}
+</script>
+
+</body>
+</html>
